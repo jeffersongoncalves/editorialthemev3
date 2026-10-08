@@ -2365,16 +2365,16 @@
         },
         {
             "name": "jeffersongoncalves/filament-editorial-theme",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-editorial-theme.git",
-                "reference": "f3bd43be6862a85a7d3c37d866ceeba570542632"
+                "reference": "6b94eca64b5caa41507b4e1c135c277fa4640748"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-editorial-theme/zipball/f3bd43be6862a85a7d3c37d866ceeba570542632",
-                "reference": "f3bd43be6862a85a7d3c37d866ceeba570542632",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-editorial-theme/zipball/6b94eca64b5caa41507b4e1c135c277fa4640748",
+                "reference": "6b94eca64b5caa41507b4e1c135c277fa4640748",
                 "shasum": ""
             },
             "require": {
@@ -2428,7 +2428,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/filament-editorial-theme/issues",
-                "source": "https://github.com/jeffersongoncalves/filament-editorial-theme/tree/1.4.0"
+                "source": "https://github.com/jeffersongoncalves/filament-editorial-theme/tree/1.5.0"
             },
             "funding": [
                 {
@@ -2440,7 +2440,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-08T12:25:30+00:00"
+            "time": "2026-10-08T13:12:31+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-logo",

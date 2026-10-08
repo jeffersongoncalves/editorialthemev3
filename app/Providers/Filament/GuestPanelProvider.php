@@ -27,6 +27,7 @@ class GuestPanelProvider extends PanelProvider
             ->id('guest')
             ->path('')
             ->brandLogo(fn () => Vite::asset(config('editorialtheme.logo')))
+            ->darkModeBrandLogo(fn () => Vite::asset(config('editorialtheme.logo_dark')))
             ->brandLogoHeight('50px')
             ->viteTheme('resources/css/filament/guest/theme.css')
             ->defaultThemeMode(config('editorialtheme.theme_mode', ThemeMode::Dark))

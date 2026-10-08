@@ -41,6 +41,7 @@ class AdminPanelProvider extends PanelProvider
             ->login(Login::class)
             ->authGuard('admin')
             ->brandLogo(fn () => Vite::asset(config('editorialtheme.logo')))
+            ->darkModeBrandLogo(fn () => Vite::asset(config('editorialtheme.logo_dark')))
             ->brandLogoHeight(fn () => request()->is('admin/login', 'admin/password-reset/*') ? '121px' : '50px')
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->defaultThemeMode(config('editorialtheme.theme_mode', ThemeMode::Dark))

@@ -7,5 +7,6 @@ return [
     'guest_panel_enabled' => true,
     'admin_panel_enabled' => true,
     'app_panel_enabled' => true,
-    'logo' => 'resources/images/logo-filakit.png',
+    'logo' => 'resources/images/logo-editorialtheme.svg',
+    'logo_dark' => 'resources/images/logo-editorialtheme-dark.svg',
 ];
