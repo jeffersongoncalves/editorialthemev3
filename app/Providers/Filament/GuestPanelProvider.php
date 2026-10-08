@@ -9,7 +9,6 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
-use Filament\Support\Colors\Color;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -18,6 +17,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use JeffersonGoncalves\Filament\Pwa\FilamentPwaPlugin;
+use JeffersonGoncalves\FilamentEditorialTheme\EditorialThemePlugin;
 
 class GuestPanelProvider extends PanelProvider
 {
@@ -26,13 +26,10 @@ class GuestPanelProvider extends PanelProvider
         return $panel
             ->id('guest')
             ->path('')
-            ->colors([
-                'primary' => Color::Gray,
-            ])
-            ->brandLogo(fn () => Vite::asset(config('filakit.logo')))
+            ->brandLogo(fn () => Vite::asset(config('editorialtheme.logo')))
             ->brandLogoHeight('50px')
             ->viteTheme('resources/css/filament/guest/theme.css')
-            ->defaultThemeMode(config('filakit.theme_mode', ThemeMode::Dark))
+            ->defaultThemeMode(config('editorialtheme.theme_mode', ThemeMode::Dark))
             ->discoverResources(in: app_path('Filament/Guest/Resources'), for: 'App\\Filament\\Guest\\Resources')
             ->discoverPages(in: app_path('Filament/Guest/Pages'), for: 'App\\Filament\\Guest\\Pages')
             ->pages([
@@ -52,6 +49,7 @@ class GuestPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->plugins([
+                EditorialThemePlugin::make(),
                 FilamentPwaPlugin::make(),
             ])
             ->topNavigation()

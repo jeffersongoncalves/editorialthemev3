@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53a8c349fc2a300a0431fc7484fac128",
+    "content-hash": "97b8d42ba66779d8b9a86af46d3ec693",
     "packages": [
         {
             "name": "achyutn/filament-log-viewer",
@@ -2362,6 +2362,85 @@
                 }
             ],
             "time": "2026-09-26T21:20:52+00:00"
+        },
+        {
+            "name": "jeffersongoncalves/filament-editorial-theme",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeffersongoncalves/filament-editorial-theme.git",
+                "reference": "f3bd43be6862a85a7d3c37d866ceeba570542632"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-editorial-theme/zipball/f3bd43be6862a85a7d3c37d866ceeba570542632",
+                "reference": "f3bd43be6862a85a7d3c37d866ceeba570542632",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.3",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.0",
+                "orchestra/testbench": "^10.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JeffersonGoncalves\\FilamentEditorialTheme\\EditorialThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JeffersonGoncalves\\FilamentEditorialTheme\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jefferson Gonçalves",
+                    "email": "gerson.simao.92@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Editorial Terminal: a paper + terminal theme for Filament 3, 4 and 5. Fraunces / DM Sans / JetBrains Mono typography, amber palette, light and dark schemes, sidebar layout fixes, footer and status partials and an optional terminal-style login.",
+            "homepage": "https://github.com/jeffersongoncalves/filament-editorial-theme",
+            "keywords": [
+                "dark-mode",
+                "editorial",
+                "filament",
+                "filament-plugin",
+                "filament-theme",
+                "jeffersongoncalves",
+                "laravel",
+                "terminal",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/jeffersongoncalves/filament-editorial-theme/issues",
+                "source": "https://github.com/jeffersongoncalves/filament-editorial-theme/tree/1.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://buymeacoffee.com/jeffersongoncalves",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/jeffersongoncalves",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-10-08T12:25:30+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-logo",

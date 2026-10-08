@@ -1,27 +1,30 @@
 <div class="filament-hidden">
 
-![FilaKit](https://raw.githubusercontent.com/jeffersongoncalves/filakit/main/art/jeffersongoncalves-filakit.png)
+![EditorialTheme](https://raw.githubusercontent.com/jeffersongoncalves/editorialthemev3/main/art/jeffersongoncalves-editorialthemev3.png)
 
 </div>
 
-# FilaKit Start Kit Filament 3.x and Laravel 12.x
+# EditorialTheme Start Kit Filament 3.x and Laravel 13.x
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeffersongoncalves)
 
-## About FilaKit
+## About EditorialTheme
 
-FilaKit is a robust starter kit built on Laravel 12.x and Filament 3.x, designed to accelerate the development of modern
-web applications with a ready-to-use multi-panel structure.
+EditorialTheme is a robust starter kit built on Laravel 13.x and Filament 3.x, designed to accelerate the development of modern
+web applications with a ready-to-use multi-panel structure, styled with the
+[Editorial Terminal theme](https://github.com/jeffersongoncalves/filament-editorial-theme): paper + terminal
+aesthetic, Fraunces / DM Sans / JetBrains Mono typography, amber palette, light and dark schemes and a terminal-style login.
 
 ## Features
 
-- **Laravel 12.x** - The latest version of the most elegant PHP framework
+- **Laravel 13.x** - The latest version of the most elegant PHP framework
 - **Filament 3.x** - Powerful and flexible admin framework
 - **Multi-Panel Structure** - Includes three pre-configured panels:
     - Admin Panel (`/admin`) - For system administrators
     - App Panel (`/app`) - For authenticated application users
     - Public Panel (frontend interface) - For visitors
-- **Environment Configuration** - Centralized configuration through the `config/filakit.php` file
+- **Editorial Terminal Theme** - [`jeffersongoncalves/filament-editorial-theme`](https://github.com/jeffersongoncalves/filament-editorial-theme) on every panel, with the terminal login (and its light/dark toggle) on the Admin and App panels
+- **Environment Configuration** - Centralized configuration through the `config/editorialtheme.php` file
 
 ## System Requirements
 
@@ -33,7 +36,7 @@ web applications with a ready-to-use multi-panel structure.
 
 Clone the repository
 ``` bash
-laravel new my-app --using=jeffersongoncalves/filakit --database=mysql
+laravel new my-app --using=jeffersongoncalves/editorialthemev3 --database=mysql
 ```
 
 ### Using FilaKit CLI
@@ -41,14 +44,14 @@ laravel new my-app --using=jeffersongoncalves/filakit --database=mysql
 Or use [FilaKit CLI](https://github.com/jeffersongoncalves/filakit-cli) for a simplified setup:
 
 ```bash
-filakit new my-app --kit=jeffersongoncalves/filakit
+filakit new my-app --kit=jeffersongoncalves/editorialthemev3
 ```
 
 > Install FilaKit CLI: `composer global require jeffersongoncalves/filakit-cli`
 
 ###  Easy Installation
 
-FilaKit can be easily installed using the following command:
+EditorialTheme can be easily installed using the following command:
 
 ```bash
 php install.php
@@ -99,7 +102,7 @@ php artisan serve
 
 Clone the repository
 ```bash
-laravel new my-app --using=jeffersongoncalves/filakit --database=mysql
+laravel new my-app --using=jeffersongoncalves/editorialthemev3 --database=mysql
 ```
 
 Move into the project directory
@@ -154,9 +157,21 @@ Install JavaScript dependencies
 pnpm install
 ```
 
+## Editorial Terminal Theme — jeffersongoncalves/filament-editorial-theme
+
+All three panels use [`jeffersongoncalves/filament-editorial-theme`](https://github.com/jeffersongoncalves/filament-editorial-theme):
+
+- `EditorialThemePlugin::make()` is registered in each panel provider (the App panel keeps its green accent via `->primaryColor(Color::Green)`).
+- Each panel's `resources/css/filament/{panel}/theme.css` imports Filament's theme, then the editorial theme, and its `tailwind.config.js` includes the theme's views in `content` so Tailwind keeps the utilities its partials use.
+- The Admin and App logins (`app/Filament/{Admin,App}/Pages/Auth/Login.php`) extend the `filament-admin` / `filament-user` logins — so
+  inactive accounts are still rejected — and only swap in the theme's terminal view, with a light/dark toggle next to the clock.
+
+Customize it from the plugin (footer, sidebar status, fonts, paper grain…) or by overriding the theme's CSS tokens below the
+`@import` in each panel's `theme.css` — see the [theme's README](https://github.com/jeffersongoncalves/filament-editorial-theme#usage).
+
 ## Authentication Structure
 
-FilaKit comes pre-configured with a custom authentication system that supports different types of users:
+EditorialTheme comes pre-configured with a custom authentication system that supports different types of users:
 
 - `Admin` - For administrative panel access
 - `User` - For application panel access
@@ -183,16 +198,16 @@ Panels can be customized through their respective providers:
 - `app/Providers/Filament/AppPanelProvider.php`
 - `app/Providers/Filament/PublicPanelProvider.php`
 
-Alternatively, these settings are also consolidated in the `config/filakit.php` file for easier management.
+Alternatively, these settings are also consolidated in the `config/editorialtheme.php` file for easier management.
 
 ### Themes and Colors
 
 Each panel can have its own color scheme, which can be easily modified in the corresponding Provider files or in the
-`filakit.php` configuration file.
+`editorialtheme.php` configuration file.
 
 ### Configuration File
 
-The `config/filakit.php` file centralizes the configuration of the starter kit, including:
+The `config/editorialtheme.php` file centralizes the configuration of the starter kit, including:
 
 - Panel routes
 - Middleware for each panel
@@ -201,7 +216,7 @@ The `config/filakit.php` file centralizes the configuration of the starter kit, 
 
 ## Resources
 
-FilaKit includes support for:
+EditorialTheme includes support for:
 
 - User and admin management
 - Multi-guard authentication system

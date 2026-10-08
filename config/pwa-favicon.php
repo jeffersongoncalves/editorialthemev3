@@ -14,8 +14,8 @@ return [
     // densities + 512 master + maskable) is built at request time from the
     // `manifest.icons` density map below, so do NOT hand-write `icons` here.
     'manifest' => [
-        'name' => env('APP_NAME', 'Filakit'),
-        'short_name' => env('APP_NAME', 'Filakit'),
+        'name' => env('APP_NAME', 'EditorialTheme'),
+        'short_name' => env('APP_NAME', 'EditorialTheme'),
         'description' => 'A Progressive Web App built with Laravel.',
         // start_url carries a `source=pwa` flag so analytics can split
         // installs vs regular web hits without affecting routing.

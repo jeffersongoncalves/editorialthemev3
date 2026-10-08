@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "jeffersongoncalves/filakit",
+    "name": "jeffersongoncalves/editorialthemev3",
     "type": "project",
-    "description": "FilaKit starter kit built on Laravel 13.x and Filament 3.x with a ready-to-use multi-panel structure.",
+    "description": "EditorialTheme starter kit built on Laravel 13.x and Filament 3.x with a ready-to-use multi-panel structure.",
     "keywords": [
         "laravel-starter-kit",
         "starter-kit",
@@ -11,7 +11,9 @@
         "filament",
         "filament-v3",
         "livewire",
-        "tailwindcss"
+        "tailwindcss",
+        "filament-editorial-theme",
+        "editorial-theme"
     ],
     "license": "MIT",
     "require": {
@@ -21,6 +23,7 @@
         "filament/filament": "^3.3",
         "jeffersongoncalves/filament-additional-information": "^1.0",
         "jeffersongoncalves/filament-admin": "^1.0",
+        "jeffersongoncalves/filament-editorial-theme": "^1.4",
         "jeffersongoncalves/filament-logo": "^1.0",
         "jeffersongoncalves/filament-pwa": "^1.0",
         "jeffersongoncalves/filament-sensible-defaults": "^1.0",
