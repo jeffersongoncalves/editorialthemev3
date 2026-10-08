@@ -3,6 +3,8 @@
 namespace App\Providers\Filament;
 
 use App\Filament\App\Pages\Auth\Login;
+use App\Models\User;
+use DutchCodingCompany\FilamentDeveloperLogins\FilamentDeveloperLoginsPlugin;
 use Filament\Enums\ThemeMode;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -66,6 +68,11 @@ class AppPanelProvider extends PanelProvider
             ->plugins([
                 EditorialThemePlugin::make()
                     ->primaryColor(Color::Green),
+                // One-click login as any active user, local environment only.
+                FilamentDeveloperLoginsPlugin::make()
+                    ->enabled(fn () => app()->environment('local'))
+                    ->modelClass(User::class)
+                    ->users(fn () => User::query()->where('status', true)->pluck('email', 'name')->toArray()),
                 FilamentPwaPlugin::make(),
                 FilamentEditProfilePlugin::make()
                     ->slug('my-profile')
